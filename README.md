@@ -134,24 +134,6 @@ npm run build
 npm run preview
 ```
 
-## Data Structure
-
-The application uses a structured data approach for scenarios:
-
-- **Scenarios**: Top-level containers for different use cases (clinic, supermarket)
-- **Stages**: Steps within each scenario (body-part selection, symptoms, etc.)
-- **Items**: Individual selectable elements with images, audio, and metadata
-- **Recommendations**: Outcome suggestions based on user selections
-- **Rules Engine**: Logic for matching user inputs to appropriate recommendations
-
-## Accessibility Considerations
-
-- **Visual Design**: High contrast, large touch targets, clear visual hierarchy
-- **Audio Support**: Every interactive element includes audio feedback
-- **Simple Language**: Minimal text with large, readable fonts
-- **Progressive Enhancement**: Works without JavaScript for basic functionality
-- **Screen Reader Support**: Proper ARIA labels and semantic HTML
-
 ## Future Development
 
 - **Additional Scenarios**: Expand beyond clinic to include supermarket, transportation, etc.
@@ -161,24 +143,6 @@ The application uses a structured data approach for scenarios:
 - **Data Collection**: Optional analytics for improving recommendations
 - **Integration**: API connections to real healthcare services
 
-## Contributing
-
-This project was developed as part of a university competition. Contributions are welcome for:
-
-- Adding new scenarios
-- Improving accessibility features
-- Enhancing the user interface
-- Expanding the recommendation engine
-- Adding new languages or audio content
-
-Please follow the existing code structure and maintain the focus on visual communication and accessibility.
-
 ## License
 
 This project is licensed under the terms specified in the LICENSE file.
-
-## Acknowledgments
-
-- Developed for the University of Washington competition
-- Inspired by the need for accessible communication tools for low-literacy populations
-- Built with modern web technologies for maximum compatibility and performance
