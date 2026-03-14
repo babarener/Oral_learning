@@ -25,10 +25,11 @@ export const clinicScenario: Scenario = {
           asset: {
             id: 'asset-head',
             image: '/images/clinic/head.png',
+            // animation: '🤢',
             audio: '/audio/mock/head.mp3',
             alt: 'Head',
           },
-          hotspot: { x: 43, y: 5, w: 14, h: 12 },
+          hotspot: { x: 43, y: 8, w: 14, h: 4 },
         },
         {
           id: 'eyes',
@@ -39,7 +40,29 @@ export const clinicScenario: Scenario = {
             audio: '/audio/mock/eyes.mp3',
             alt: 'Eyes',
           },
-          hotspot: { x: 44, y: 11, w: 12, h: 6 },
+          hotspot: { x: 44, y: 12, w: 12, h: 2 },
+        },
+        {
+          id: 'shoulder',
+          label: 'Shoulder',
+          asset: {
+            id: 'asset-shoulder',
+            image: '/images/clinic/shoulder.png',
+            audio: '/audio/mock/shoulder.mp3',
+            alt: 'Shoulder',
+          },
+          hotspot: { x: 34, y: 20, w: 8, h: 5 },
+        },
+        {
+          id: 'chest',
+          label: 'Chest',
+          asset: {
+            id: 'asset-chest',
+            image: '/images/clinic/chest.png',
+            audio: '/audio/mock/chest.mp3',
+            alt: 'Chest',
+          },
+          hotspot: { x: 39, y: 24, w: 8, h: 5 },
         },
         {
           id: 'hand',
@@ -50,7 +73,7 @@ export const clinicScenario: Scenario = {
             audio: '/audio/mock/hand.mp3',
             alt: 'Hand',
           },
-          hotspot: { x: 22, y: 32, w: 18, h: 12 },
+          hotspot: { x: 17, y: 42, w: 9, h: 6 },
         },
         {
           id: 'stomach',
@@ -61,7 +84,7 @@ export const clinicScenario: Scenario = {
             audio: '/audio/mock/stomach.mp3',
             alt: 'Stomach',
           },
-          hotspot: { x: 42, y: 35, w: 16, h: 15 },
+          hotspot: { x: 42, y: 35, w: 16, h: 8 },
         },
         {
           id: 'leg',
