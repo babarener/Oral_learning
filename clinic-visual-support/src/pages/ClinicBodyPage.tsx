@@ -36,16 +36,17 @@ export function ClinicBodyPage() {
       />
 
       <div className="page-actions">
-        <button type="button" className="btn-secondary" onClick={() => navigate('/')}>
-          Home
+        <button type="button" className="btn-secondary" aria-label="Home" onClick={() => navigate('/')}>
+          🏠
         </button>
         <button
           type="button"
           className="btn-primary"
+          aria-label="Next"
           disabled={!selectedBodyPartId}
           onClick={() => navigate('/clinic/symptoms')}
         >
-          Next
+          ➡️
         </button>
       </div>
     </div>

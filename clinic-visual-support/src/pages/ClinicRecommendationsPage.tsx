@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { VisualCard } from '../components/common/VisualCard';
 import { useAppStore } from '../app/store';
@@ -6,6 +7,7 @@ import { getRecommendations } from '../services/recommendation/engine';
 import { audioManager } from '../services/audio/audioManager';
 
 export function ClinicRecommendationsPage() {
+  const hasPlayedSuggestionRef = useRef(false);
   const navigate = useNavigate();
   const scenarioId = useAppStore((state) => state.scenarioId);
   const selectedBodyPartId = useAppStore((state) => state.selectedBodyPartId);
@@ -32,6 +34,15 @@ export function ClinicRecommendationsPage() {
     symptoms: selectedSymptomIds,
   });
 
+  useEffect(() => {
+    if (hasPlayedSuggestionRef.current) {
+      return;
+    }
+
+    hasPlayedSuggestionRef.current = true;
+    void audioManager.play('/audio/mock/doctor_suggestion.mp3');
+  }, []);
+
   return (
     <div className="page-flow">
       <section className="page-card">
@@ -55,19 +66,20 @@ export function ClinicRecommendationsPage() {
       </section>
 
       <div className="page-actions">
-        <button type="button" className="btn-secondary" onClick={() => navigate('/')}>
-          Home
+        <button type="button" className="btn-secondary" aria-label="Home" onClick={() => navigate('/')}>
+          🏠
         </button>
         <button
           type="button"
           className="btn-primary"
+          aria-label="Restart"
           onClick={() => {
             setScenario('clinic');
             resetClinicFlow();
             navigate('/clinic/body');
           }}
         >
-          Restart
+          🔄
         </button>
       </div>
     </div>

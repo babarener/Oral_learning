@@ -230,12 +230,14 @@ button {
 .btn-primary,
 .btn-secondary {
   border-radius: 10px;
-  min-height: 52px;
-  min-width: 110px;
-  padding: 0 20px;
+  min-height: 64px;
+  min-width: 84px;
+  padding: 0 16px;
   border: 2px solid transparent;
   cursor: pointer;
   font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
 }
 
 .btn-primary {

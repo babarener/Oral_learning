@@ -6,7 +6,7 @@ export const clinicScenario: Scenario = {
   description: 'Visual support for clinic communication',
   cover: {
     id: 'cover-clinic',
-    image: '/images/clinic/cover-clinic.png',
+    image: '/images/clinic/clinic.jpg',
     audio: '/audio/mock/clinic.mp3',
     alt: 'Clinic',
   },
@@ -202,7 +202,7 @@ export const clinicScenario: Scenario = {
       label: 'Medicine',
       asset: {
         id: 'recommend-medicine',
-        image: '/images/clinic/recommend-medicine.png',
+        image: '/images/clinic/medicine.jpg',
         audio: '/audio/mock/medicine.mp3',
         alt: 'Medicine',
       },
@@ -212,7 +212,7 @@ export const clinicScenario: Scenario = {
       label: 'Drink Water',
       asset: {
         id: 'recommend-water',
-        image: '/images/clinic/recommend-water.png',
+        image: '/images/clinic/drinkwater.jpg',
         audio: '/audio/mock/drink_water.mp3',
         alt: 'Drink water',
       },
@@ -222,7 +222,7 @@ export const clinicScenario: Scenario = {
       label: 'Rest',
       asset: {
         id: 'recommend-rest',
-        image: '/images/clinic/recommend-rest.png',
+        image: '/images/clinic/sleep.jpg',
         audio: '/audio/mock/rest.mp3',
         alt: 'Rest',
       },
@@ -232,7 +232,7 @@ export const clinicScenario: Scenario = {
       label: 'Injection',
       asset: {
         id: 'recommend-injection',
-        image: '/images/clinic/recommend-injection.png',
+        image: '/images/clinic/injection.jpg',
         audio: '/audio/mock/injection.mp3',
         alt: 'Injection',
       },
@@ -242,7 +242,7 @@ export const clinicScenario: Scenario = {
       label: 'Wait',
       asset: {
         id: 'recommend-wait',
-        image: '/images/clinic/recommend-wait.png',
+        image: '/images/clinic/wait.jpg',
         audio: '/audio/mock/wait.mp3',
         alt: 'Wait',
       },

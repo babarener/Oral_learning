@@ -40,16 +40,22 @@ export function ClinicSymptomsPage() {
       />
 
       <div className="page-actions">
-        <button type="button" className="btn-secondary" onClick={() => navigate('/clinic/body')}>
-          Back
+        <button
+          type="button"
+          className="btn-secondary"
+          aria-label="Back"
+          onClick={() => navigate('/clinic/body')}
+        >
+          ⬅️
         </button>
         <button
           type="button"
           className="btn-primary"
+          aria-label="Next"
           disabled={selectedSymptomIds.length === 0}
           onClick={() => navigate('/clinic/recommendations')}
         >
-          Next
+          ➡️
         </button>
       </div>
     </div>

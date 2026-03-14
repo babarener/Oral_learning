@@ -6,7 +6,7 @@ export const recommendationRules: RecommendationRule[] = [
     scenarioId: 'clinic',
     bodyPartId: 'stomach',
     symptomAny: ['stomachache', 'diarrhea'],
-    recommendations: ['medicine', 'drink_water', 'rest', 'wait'],
+    recommendations: ['medicine', 'drink_water', 'rest', 'wait', 'injection'],
     priority: 100,
   },
   {
@@ -14,7 +14,7 @@ export const recommendationRules: RecommendationRule[] = [
     scenarioId: 'clinic',
     bodyPartId: 'head',
     symptomAny: ['headache', 'fever'],
-    recommendations: ['rest', 'drink_water', 'medicine', 'wait'],
+    recommendations: ['medicine', 'drink_water', 'rest', 'wait', 'injection'],
     priority: 90,
   },
   {
@@ -22,7 +22,7 @@ export const recommendationRules: RecommendationRule[] = [
     scenarioId: 'clinic',
     bodyPartId: 'eyes',
     symptomAny: ['pain'],
-    recommendations: ['wait', 'treatment'],
+    recommendations: ['medicine', 'drink_water', 'rest', 'wait', 'injection'],
     priority: 80,
   },
   {
@@ -30,7 +30,7 @@ export const recommendationRules: RecommendationRule[] = [
     scenarioId: 'clinic',
     bodyPartId: 'hand',
     symptomAny: ['pain'],
-    recommendations: ['injection', 'treatment', 'wait'],
+    recommendations: ['medicine', 'drink_water', 'rest', 'wait', 'injection'],
     priority: 80,
   },
   {
@@ -38,20 +38,20 @@ export const recommendationRules: RecommendationRule[] = [
     scenarioId: 'clinic',
     bodyPartId: 'leg',
     symptomAny: ['pain'],
-    recommendations: ['treatment', 'rest', 'wait'],
+    recommendations: ['medicine', 'drink_water', 'rest', 'wait', 'injection'],
     priority: 80,
   },
   {
     id: 'cough-fever',
     scenarioId: 'clinic',
     symptomAll: ['cough', 'fever'],
-    recommendations: ['medicine', 'drink_water', 'rest'],
+    recommendations: ['medicine', 'drink_water', 'rest', 'wait', 'injection'],
     priority: 70,
   },
   {
     id: 'fallback-general',
     scenarioId: 'clinic',
-    recommendations: ['wait', 'treatment', 'drink_water'],
+    recommendations: ['medicine', 'drink_water', 'rest', 'wait', 'injection'],
     priority: 1,
   },
 ];
