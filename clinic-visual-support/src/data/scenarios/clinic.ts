@@ -108,22 +108,12 @@ export const clinicScenario: Scenario = {
       nextStageId: 'recommendations',
       items: [
         {
-          id: 'stomachache',
-          label: 'Stomachache',
-          asset: {
-            id: 'asset-stomachache',
-            image: '/images/clinic/stomachache.png',
-            animation: '🤢',
-            audio: '/audio/mock/stomachache.mp3',
-          },
-        },
-        {
           id: 'fever',
           label: 'Fever',
           asset: {
             id: 'asset-fever',
-            image: '/images/clinic/fever.png',
-            animation: '🌡️',
+            image: '/images/clinic/fever.jpg',
+            animation: '🤒',
             audio: '/audio/mock/fever.mp3',
           },
         },
@@ -132,19 +122,9 @@ export const clinicScenario: Scenario = {
           label: 'Headache',
           asset: {
             id: 'asset-headache',
-            image: '/images/clinic/headache.png',
+            image: '/images/clinic/headache.jpg',
             animation: '🤕',
             audio: '/audio/mock/headache.mp3',
-          },
-        },
-        {
-          id: 'diarrhea',
-          label: 'Diarrhea',
-          asset: {
-            id: 'asset-diarrhea',
-            image: '/images/clinic/diarrhea.png',
-            animation: '🚻',
-            audio: '/audio/mock/diarrhea.mp3',
           },
         },
         {
@@ -158,13 +138,53 @@ export const clinicScenario: Scenario = {
           },
         },
         {
-          id: 'pain',
-          label: 'Pain',
+          id: 'stomachache',
+          label: 'Stomachache',
           asset: {
-            id: 'asset-pain',
-            image: '/images/clinic/pain.png',
-            animation: '⚡',
-            audio: '/audio/mock/pain.mp3',
+            id: 'asset-stomachpain',
+            image: '/images/clinic/stomachach.png',
+            animation: '🤢',
+            audio: '/audio/mock/stomachache.mp3',
+          },
+        },
+        {
+          id: 'vomiting',
+          label: 'Vomiting',
+          asset: {
+            id: 'asset-vomiting',
+            image: '/images/clinic/vomiting.jpg',
+            animation: '🤮',
+            audio: '/audio/mock/vomiting.mp3',
+          },
+        },
+        {
+          id: 'diarrhea',
+          label: 'Diarrhea',
+          asset: {
+            id: 'asset-diarrhea',
+            image: '/images/clinic/diarrhea.jpg',
+            animation: '🚽',
+            audio: '/audio/mock/diarrhea.mp3',
+          },
+        },
+        {
+          id: 'sorethroat',
+          label: 'Sore Throat',
+          asset: {
+            id: 'asset-sorethroat',
+            image: '/images/clinic/sorethroat.jpg',
+            animation: '😖',
+            audio: '/audio/mock/sorethroat.mp3',
+          },
+        },
+        {
+          id: 'earpain',
+          label: 'Ear Pain',
+          asset: {
+            id: 'asset-earpain',
+            image: '/images/clinic/earpain.jpg',
+            animation: '👂',
+            audio: '/audio/mock/earpain.mp3',
           },
         },
       ],
