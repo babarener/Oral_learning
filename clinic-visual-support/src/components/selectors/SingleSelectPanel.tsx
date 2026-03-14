@@ -9,6 +9,14 @@ interface SingleSelectPanelProps {
   onSelect: (item: SelectableItem) => void;
 }
 
+function isImageSrc(value?: string): value is string {
+  if (!value) {
+    return false;
+  }
+
+  return /\.(png|jpe?g|svg|webp|gif|avif)$/i.test(value) || value.startsWith('/images/');
+}
+
 export function SingleSelectPanel(props: SingleSelectPanelProps) {
   const { title, helperText, bodyAsset, items, selectedId, onSelect } = props;
 
@@ -21,7 +29,13 @@ export function SingleSelectPanel(props: SingleSelectPanelProps) {
 
       <div className="body-selector-layout">
         <div className="body-canvas" role="img" aria-label="Full body placeholder image">
-          <div className="body-canvas__figure">{bodyAsset}</div>
+          <div className="body-canvas__figure">
+            {isImageSrc(bodyAsset) ? (
+              <img src={bodyAsset} alt="Body" className="body-canvas__figure-image" />
+            ) : (
+              bodyAsset
+            )}
+          </div>
           {items.map((item) => {
             if (!item.hotspot) {
               return null;
@@ -60,7 +74,15 @@ export function SingleSelectPanel(props: SingleSelectPanelProps) {
                   aria-pressed={isSelected}
                 >
                   <span className="label-chip__icon" aria-hidden="true">
-                    {item.asset.image ?? '🧩'}
+                    {isImageSrc(item.asset.image) ? (
+                      <img
+                        src={item.asset.image}
+                        alt={item.asset.alt ?? item.label}
+                        className="label-chip__icon-image"
+                      />
+                    ) : (
+                      item.asset.image ?? '🧩'
+                    )}
                   </span>
                   <span>{item.label}</span>
                 </button>

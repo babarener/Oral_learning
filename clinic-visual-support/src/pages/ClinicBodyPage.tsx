@@ -26,7 +26,7 @@ export function ClinicBodyPage() {
       <SingleSelectPanel
         title={stage.title}
         helperText={stage.helperText}
-        bodyAsset="🧍"
+        bodyAsset="/images/clinic/body.png"
         items={stage.items}
         selectedId={selectedBodyPartId}
         onSelect={async (item) => {

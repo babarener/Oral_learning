@@ -115,6 +115,12 @@ button {
   line-height: 1;
 }
 
+.visual-card__image-content {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
 .visual-card__label {
   font-size: 1.2rem;
   color: #102635;
@@ -147,6 +153,12 @@ button {
   display: grid;
   place-items: center;
   opacity: 0.95;
+}
+
+.body-canvas__figure-image {
+  max-width: 88%;
+  max-height: 88%;
+  object-fit: contain;
 }
 
 .hotspot {
@@ -201,6 +213,12 @@ button {
 
 .label-chip__icon {
   font-size: 1.5rem;
+}
+
+.label-chip__icon-image {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .page-actions {

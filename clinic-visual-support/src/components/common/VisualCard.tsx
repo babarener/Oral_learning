@@ -9,6 +9,14 @@ interface VisualCardProps {
   subLabel?: string;
 }
 
+function isImageSrc(value?: string): value is string {
+  if (!value) {
+    return false;
+  }
+
+  return /\.(png|jpe?g|svg|webp|gif|avif)$/i.test(value) || value.startsWith('/images/');
+}
+
 export function VisualCard(props: VisualCardProps) {
   const { label, asset, selected = false, disabled = false, onClick, subLabel } = props;
 
@@ -21,7 +29,11 @@ export function VisualCard(props: VisualCardProps) {
       aria-pressed={selected}
     >
       <span className="visual-card__image" aria-hidden="true">
-        {asset.image ?? '🧩'}
+        {isImageSrc(asset.image) ? (
+          <img src={asset.image} alt={asset.alt ?? label} className="visual-card__image-content" />
+        ) : (
+          asset.image ?? '🧩'
+        )}
       </span>
       <span className="visual-card__label">{label}</span>
       {subLabel ? <span className="visual-card__sub-label">{subLabel}</span> : null}
